@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<style>
+    #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; border: 1px solid black }
+    #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; border: 1px solid black}
+    .dropped{background-color: brown}
+</style>
+<script>
+    $(function () {
+        $('#draggable').draggable();
+        $('#droppable').droppable({
+            drop: function (event, ui) {
+                $(this)
+                    .addClass('dropped')
+                    .find('p')
+                    .html('Dropped!');
+            }
+        });
+    })
+</script>
+<body>
+    <div class="" id="draggable">
+        <p>Drag me to my taget</p>
+    </div>
+
+    <div class="" id="droppable">
+        <p>Drop here</p>
+    </div>
+</body>
+</html>

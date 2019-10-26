@@ -1,0 +1,12 @@
+.header{
+	width:100%;
+	padding: 10px;
+	text-align: center;
+	color: black;
+}
+
+.left{width:100%;text-align: left;padding-left:0px;
+}.left-menu{text-align:left;
+}.left-title{margin-left: 25px;
+}.right{width:100%;}hr{width:100%;
+}iframe{width:571px;height:450px;}
